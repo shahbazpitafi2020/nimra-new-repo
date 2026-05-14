@@ -7,10 +7,5 @@
       "source": "/(.*)",
       "destination": "dist/server/index.js"
     }
-  ],
-  "functions": {
-    "dist/server/index.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  ]
 }
