@@ -109,7 +109,8 @@ function ServicesPage() {
               return (
                 <Link
                  key={service.id}
-                 to="/services"
+                 to="/services/$id"
+                 params={{ id: service.id }}
                   className="block rounded-2xl border border-border bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-teal/10 text-teal">
