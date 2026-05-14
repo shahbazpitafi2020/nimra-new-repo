@@ -2,15 +2,15 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
-  "functions": {
-    "dist/server/index.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "dist/server/index.js"
     }
-  ]
+  ],
+  "functions": {
+    "dist/server/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
 }
