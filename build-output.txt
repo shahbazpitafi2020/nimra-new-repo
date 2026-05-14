@@ -1,0 +1,89 @@
+
+> build
+> vite build
+
+[36mvite v7.3.3 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 1987 modules transformed.
+rendering chunks...
+[33m[plugin vite:reporter] 
+(!) C:/Users/DELL/Documents/nimra-new-repo/nimra-new-repo/src/router.tsx is dynamically imported by C:/Users/DELL/Documents/nimra-new-repo/nimra-new-repo/src/start.ts but also statically imported by C:/Users/DELL/Documents/nimra-new-repo/nimra-new-repo/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js, dynamic import will not move module into another chunk.
+[39m
+computing gzip size...
+[2mdist/client/[22m[32m.assetsignore                       [39m[1m[2m  0.02 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/hero-doctor-CqjKyBoD.jpg     [39m[1m[2m119.23 kB[22m[1m[22m
+[2mdist/client/[22m[35massets/styles-BopktRrI.css          [39m[1m[2m 86.87 kB[22m[1m[22m[2m │ gzip:  14.40 kB[22m
+[2mdist/client/[22m[36massets/chevron-right-DYlacUep.js    [39m[1m[2m  0.21 kB[22m[1m[22m[2m │ gzip:   0.18 kB[22m
+[2mdist/client/[22m[36massets/admin-DRdaYkrp.js            [39m[1m[2m  0.24 kB[22m[1m[22m[2m │ gzip:   0.21 kB[22m
+[2mdist/client/[22m[36massets/syringe-C45q_UrZ.js          [39m[1m[2m  1.63 kB[22m[1m[22m[2m │ gzip:   0.77 kB[22m
+[2mdist/client/[22m[36massets/add-blog-1p76GDoR.js         [39m[1m[2m  1.69 kB[22m[1m[22m[2m │ gzip:   0.76 kB[22m
+[2mdist/client/[22m[36massets/users-CX3nSV_j.js            [39m[1m[2m  1.93 kB[22m[1m[22m[2m │ gzip:   0.87 kB[22m
+[2mdist/client/[22m[36massets/book-BIlBcjWp.js             [39m[1m[2m  2.26 kB[22m[1m[22m[2m │ gzip:   0.95 kB[22m
+[2mdist/client/[22m[36massets/AdminShell-8_VEwttg.js       [39m[1m[2m  2.36 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/client/[22m[36massets/blog._id-Bq6nCqNX.js         [39m[1m[2m  2.37 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/client/[22m[36massets/blog._id.new-o6_UkQcs.js     [39m[1m[2m  2.37 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/client/[22m[36massets/services-BhXawDUU.js         [39m[1m[2m  2.60 kB[22m[1m[22m[2m │ gzip:   1.10 kB[22m
+[2mdist/client/[22m[36massets/blog.index-B_yyT3kn.js       [39m[1m[2m  2.62 kB[22m[1m[22m[2m │ gzip:   1.12 kB[22m
+[2mdist/client/[22m[36massets/blog-BuYm-HEF.js             [39m[1m[2m  2.63 kB[22m[1m[22m[2m │ gzip:   1.12 kB[22m
+[2mdist/client/[22m[36massets/admin-login-TxX6eZU4.js      [39m[1m[2m  2.92 kB[22m[1m[22m[2m │ gzip:   1.25 kB[22m
+[2mdist/client/[22m[36massets/blogs-fjoy19uV.js            [39m[1m[2m  2.94 kB[22m[1m[22m[2m │ gzip:   1.16 kB[22m
+[2mdist/client/[22m[36massets/admin-dashboard-BSEO5OvL.js  [39m[1m[2m  3.44 kB[22m[1m[22m[2m │ gzip:   1.01 kB[22m
+[2mdist/client/[22m[36massets/contact-C5IWjRQI.js          [39m[1m[2m  3.56 kB[22m[1m[22m[2m │ gzip:   1.44 kB[22m
+[2mdist/client/[22m[36massets/profile-gC5tOXfR.js          [39m[1m[2m  3.60 kB[22m[1m[22m[2m │ gzip:   1.35 kB[22m
+[2mdist/client/[22m[36massets/add-blog-CW6xT-xo.js         [39m[1m[2m  3.69 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+[2mdist/client/[22m[36massets/services-B6xvdd1b.js         [39m[1m[2m  3.99 kB[22m[1m[22m[2m │ gzip:   1.39 kB[22m
+[2mdist/client/[22m[36massets/services._id-BpqmLqoH.js     [39m[1m[2m  4.08 kB[22m[1m[22m[2m │ gzip:   1.34 kB[22m
+[2mdist/client/[22m[36massets/edit-blog._id-2vx1GmVg.js    [39m[1m[2m  4.19 kB[22m[1m[22m[2m │ gzip:   1.45 kB[22m
+[2mdist/client/[22m[36massets/index-CE8PG-Y7.js            [39m[1m[2m  5.49 kB[22m[1m[22m[2m │ gzip:   1.17 kB[22m
+[2mdist/client/[22m[36massets/admin-debug-BNNt_nIV.js      [39m[1m[2m  7.23 kB[22m[1m[22m[2m │ gzip:   2.64 kB[22m
+[2mdist/client/[22m[36massets/index-SXI8T5yT.js            [39m[1m[2m 10.46 kB[22m[1m[22m[2m │ gzip:   3.30 kB[22m
+[2mdist/client/[22m[36massets/index-DCd4HBUM.js            [39m[1m[33m567.84 kB[39m[22m[2m │ gzip: 168.52 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 9.19s[39m
+[36mvite v7.3.3 [32mbuilding ssr environment for production...[36m[39m
+transforming...
+[32m✓[39m 2033 modules transformed.
+rendering chunks...
+Using secrets defined in .env
+Using secrets defined in .env.local
+[2mdist/server/[22m[32mwrangler.json                                          [39m[1m[2m  1.32 kB[22m[1m[22m
+[2mdist/server/[22m[32m.dev.vars                                              [39m[1m[2m  1.58 kB[22m[1m[22m
+[2mdist/server/[22m[32m.vite/manifest.json                                    [39m[1m[2m 10.87 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/hero-doctor-CqjKyBoD.jpg                        [39m[1m[2m119.23 kB[22m[1m[22m
+[2mdist/server/[22m[35massets/styles-BopktRrI.css                             [39m[1m[2m 86.87 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/__23tanstack-start-plugin-adapters-Cwee5PKy.js  [39m[1m[2m  0.14 kB[22m[1m[22m
+[2mdist/server/[22m[36mindex.js                                               [39m[1m[2m  0.21 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/chevron-right-CogpXztN.js                       [39m[1m[2m  0.39 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/admin-OrDpT5cL.js                               [39m[1m[2m  0.58 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/start-BCjevVUn.js                               [39m[1m[2m  1.77 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/syringe-BARXbWoA.js                             [39m[1m[2m  2.33 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/users-DQVzYdHk.js                               [39m[1m[2m  2.67 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/add-blog-BmtuAww2.js                            [39m[1m[2m  3.17 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/AdminShell-CzqZvRV4.js                          [39m[1m[2m  3.81 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/book-DQHrlki4.js                                [39m[1m[2m  3.84 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/blog._id-BsFAMN85.js                            [39m[1m[2m  4.08 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/blog._id.new-BSBu1Eyi.js                        [39m[1m[2m  4.08 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/blog-hWisz7jc.js                                [39m[1m[2m  4.41 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/blog.index-olfkrO3C.js                          [39m[1m[2m  4.42 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/services-BzNkBcJZ.js                            [39m[1m[2m  4.43 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/_tanstack-start-manifest_v-DrNnI_1P.js          [39m[1m[2m  4.59 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/admin-login-Cs68mz9D.js                         [39m[1m[2m  4.90 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/blogs-jm9mk_FT.js                               [39m[1m[2m  4.92 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/admin-dashboard-DtOuJZgU.js                     [39m[1m[2m  5.53 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/contact-Q9ytQW3z.js                             [39m[1m[2m  5.87 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/add-blog-CLj__RBO.js                            [39m[1m[2m  6.59 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/profile-BOYgjHrd.js                             [39m[1m[2m  6.68 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/services._id-BO_GdRBJ.js                        [39m[1m[2m  7.10 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/services-jXEmMQSG.js                            [39m[1m[2m  7.16 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/edit-blog._id-B8Eqcru-.js                       [39m[1m[2m  7.71 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/index-D-pxb5D1.js                               [39m[1m[2m  8.55 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/admin-debug-BZDhXkC9.js                         [39m[1m[2m 12.32 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/index-BEcemIcq.js                               [39m[1m[2m 15.85 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/queryClient-DNlsdy-w.js                         [39m[1m[2m 54.77 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/worker-entry-Bq7uTTb4.js                        [39m[1m[33m743.97 kB[39m[22m
+[2mdist/server/[22m[36massets/router-bysHvqGa.js                              [39m[1m[33m838.92 kB[39m[22m
+[32m✓ built in 8.20s[39m
