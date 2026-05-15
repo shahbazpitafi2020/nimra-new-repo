@@ -1,4 +1,4 @@
-import fs from "node:fs";
+ import fs from "node:fs";
 import path from "node:path";
 
 const serverDir = path.join(process.cwd(), "dist", "server");
@@ -11,7 +11,31 @@ fs.writeFileSync(
   `import worker from "../server.js";
 
 export async function onRequest(context) {
-  return await worker.default.fetch(context.request, context.env, context);
+  try {
+    const handler = worker?.default?.fetch || worker?.fetch;
+
+    if (!handler) {
+      return new Response(
+        "Cloudflare worker fetch handler not found",
+        {
+          status: 500,
+        }
+      );
+    }
+
+    return await handler(
+      context.request,
+      context.env,
+      context
+    );
+  } catch (error) {
+    return new Response(
+      "Worker runtime error: " + (error?.message || error),
+      {
+        status: 500,
+      }
+    );
+  }
 }
 `,
   "utf8"
@@ -23,7 +47,14 @@ fs.writeFileSync(
     {
       version: 1,
       include: ["/*"],
-      exclude: ["/assets/*", "/.vite/*", "/_routes.json", "/favicon.ico", "/robots.txt", "/sitemap.xml"],
+      exclude: [
+        "/assets/*",
+        "/.vite/*",
+        "/_routes.json",
+        "/favicon.ico",
+        "/robots.txt",
+        "/sitemap.xml"
+      ],
     },
     null,
     2,
@@ -31,4 +62,6 @@ fs.writeFileSync(
   "utf8"
 );
 
-console.log("Generated Cloudflare Pages wrapper in dist/server/functions and _routes.json");
+console.log(
+  "Generated Cloudflare Pages wrapper in dist/server/functions and _routes.json"
+);
