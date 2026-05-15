@@ -7,8 +7,8 @@ const functionsDir = path.join(serverDir, "functions");
 fs.mkdirSync(functionsDir, { recursive: true });
 
 fs.writeFileSync(
-  path.join(functionsDir, "[[...path]].js"),
-  `import worker from "../index.js";
+  path.join(functionsDir, "[[path]].js"),
+  `import worker from "../server.js";
 
 export async function onRequest(context) {
   return await worker.default.fetch(context.request, context.env, context);
