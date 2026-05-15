@@ -22,23 +22,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient(
   supabaseUrl,
-  supabaseAnonKey,
-  {
-    global: {
-      // 2. Explicitly provide the fetch function.
-      // In Cloudflare Workers, 'fetch' is a global function.
-      // This fixes the "Cannot read properties of undefined (reading 'fetch')" error.
-      fetch: (...args) => fetch(...args),
-    },
-    auth: {
-      // 3. Disable persistence on the server side to prevent SSR crashes
-      persistSession: !isServer,
-      detectSessionInUrl: !isServer,
-    },
-  }
+  supabaseAnonKey
 )
 
-// Debug log for Cloudflare Real-time Logs
-if (isServer) {
-  console.log("🚀 Supabase SSR Client Initialized for Cloudflare Worker");
-}
+console.log("✅ Supabase client initialized")
