@@ -1,21 +1,44 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? ""
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? ""
-const hasSupabaseConfig = Boolean(supabaseUrl && supabaseAnonKey)
+// 1. Resolve Environment Variables
+// We check import.meta.env (Vite build-time) first, 
+// then fallback to process.env (Cloudflare runtime with nodejs_compat)
+const supabaseUrl = 
+  import.meta.env.VITE_SUPABASE_URL || 
+  (typeof process !== 'undefined' ? process.env.VITE_SUPABASE_URL : "") || 
+  "";
 
-console.log("🌐 Supabase Config:", {
-  url: supabaseUrl ? "✅ Present" : "❌ Missing",
-  key: supabaseAnonKey ? "✅ Present" : "❌ Missing",
-})
+const supabaseAnonKey = 
+  import.meta.env.VITE_SUPABASE_ANON_KEY || 
+  (typeof process !== 'undefined' ? process.env.VITE_SUPABASE_ANON_KEY : "") || 
+  "";
 
-if (!hasSupabaseConfig) {
-  console.warn("⚠️ Supabase environment variables are missing. App will still load, but Supabase requests may fail.")
+const isServer = typeof window === 'undefined';
+
+// Log status only during development or server startup to avoid log spam in production
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error("❌ Supabase configuration is missing! Check your environment variables.");
 }
 
 export const supabase = createClient(
   supabaseUrl,
-  supabaseAnonKey
+  supabaseAnonKey,
+  {
+    global: {
+      // 2. Explicitly provide the fetch function.
+      // In Cloudflare Workers, 'fetch' is a global function.
+      // This fixes the "Cannot read properties of undefined (reading 'fetch')" error.
+      fetch: (...args) => fetch(...args),
+    },
+    auth: {
+      // 3. Disable persistence on the server side to prevent SSR crashes
+      persistSession: !isServer,
+      detectSessionInUrl: !isServer,
+    },
+  }
 )
 
-console.log("✅ Supabase client initialized")
+// Debug log for Cloudflare Real-time Logs
+if (isServer) {
+  console.log("🚀 Supabase SSR Client Initialized for Cloudflare Worker");
+}
